@@ -28,39 +28,39 @@ export interface SocialLinkItem {
 }
 
 export const profileData: ProfileData = {
-  name: 'Mayk Brito',
-  handle: '@maykbrito',
+  name: 'Igor Aldivan',
+  handle: '@igoraldivan',
   avatarDark,
   avatarLight,
   avatarAlt: {
-    dark: 'Foto de Mayk Brito sorrindo, usando óculos escuros e jaqueta preta sobre fundo gradiente roxo e azul.',
-    light: 'Foto de Mayk Brito sorrindo, sem óculos e com jaqueta preta sobre fundo gradiente roxo e azul.'
+    dark: 'Foto de perfil de Igor Aldivan em tema escuro, usando óculos escuros e jaqueta preta.',
+    light: 'Foto de perfil de Igor Aldivan em tema claro, sorrindo e usando jaqueta preta.'
   }
 }
 
 export const linkItems: LinkItem[] = [
   {
-    id: 'nlw',
-    title: 'Inscrever-se no NLW',
-    url: '#',
-    target: '_self'
+    id: 'github-projects',
+    title: 'Acessar meu GitHub',
+    url: 'https://github.com/IgorAldivanSL',
+    target: '_blank'
   },
   {
-    id: 'ebook',
-    title: 'Baixar meu e-book',
-    url: '#',
-    target: '_self'
+    id: 'linkedin-connect',
+    title: 'Conectar no LinkedIn',
+    url: 'https://www.linkedin.com/in/igor-aldivansl',
+    target: '_blank'
   },
   {
     id: 'portfolio',
     title: 'Ver meu portfólio',
-    url: 'https://github.com/maykbrito',
+    url: 'https://github.com/IgorAldivanSL',
     target: '_blank'
   },
   {
-    id: 'explorer',
-    title: 'Conheça o Explorer',
-    url: 'https://rocketseat.com.br/explorer',
+    id: 'contact',
+    title: 'Entrar em contato',
+    url: 'https://www.linkedin.com/in/igor-aldivansl',
     target: '_blank'
   }
 ]
@@ -69,29 +69,15 @@ export const socialLinks: SocialLinkItem[] = [
   {
     id: 'github',
     name: 'GitHub',
-    url: 'https://github.com/maykbrito',
-    ariaLabel: 'Acessar perfil no GitHub',
+    url: 'https://github.com/IgorAldivanSL',
+    ariaLabel: 'Acessar perfil no GitHub de Igor Aldivan',
     icon: 'logo-github'
-  },
-  {
-    id: 'instagram',
-    name: 'Instagram',
-    url: 'https://instagram.com/maykbrito',
-    ariaLabel: 'Acessar perfil no Instagram',
-    icon: 'logo-instagram'
-  },
-  {
-    id: 'youtube',
-    name: 'YouTube',
-    url: 'https://youtube.com/maykbrito',
-    ariaLabel: 'Acessar canal no YouTube',
-    icon: 'logo-youtube'
   },
   {
     id: 'linkedin',
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/maykbrito',
-    ariaLabel: 'Acessar perfil no LinkedIn',
+    url: 'https://www.linkedin.com/in/igor-aldivansl',
+    ariaLabel: 'Acessar perfil no LinkedIn de Igor Aldivan',
     icon: 'logo-linkedin'
   }
 ]

@@ -1,6 +1,12 @@
-# DevLinks
+# DevLinks — Igor Aldivan
 
-Aplicação agregadora de links desenvolvida em **React** e **TypeScript** com **Vite**, reproduzindo fielmente o design do Figma e as especificações do **AGENTS.md**.
+Aplicação agregadora de links de **Igor Aldivan**, desenvolvida em **React** e **TypeScript** com **Vite**, reproduzindo fielmente as referências de design do Figma e seguindo todas as boas práticas de desenvolvimento front-end.
+
+## 👤 Perfil
+
+- **Nome:** Igor Aldivan
+- **GitHub:** [https://github.com/IgorAldivanSL](https://github.com/IgorAldivanSL)
+- **LinkedIn:** [https://www.linkedin.com/in/igor-aldivansl](https://www.linkedin.com/in/igor-aldivansl)
 
 ## 🚀 Tecnologias
 

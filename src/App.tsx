@@ -25,14 +25,14 @@ export function App() {
       <SocialLinks links={socialLinks} />
 
       <footer className="footer">
-        Feito com ♥ pela{' '}
+        Feito com ♥ por{' '}
         <a
-          href="https://rocketseat.com.br/"
+          href="https://github.com/IgorAldivanSL"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-link"
         >
-          Rocketseat
+          Igor Aldivan
         </a>
       </footer>
     </main>
