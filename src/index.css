@@ -1,0 +1,109 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Design Tokens & Theme Variables */
+:root {
+  font-family: 'Inter', Arial, sans-serif;
+  color-scheme: light;
+
+  /* Tokens oficiais — Light Mode */
+  --text-color-light-mode: #000000;
+  --stroke-color-light-mode: rgb(0 0 0 / 50%);
+  --surface-color-light-mode: rgb(0 0 0 / 5%);
+  --surface-color-light-mode-hover: rgb(0 0 0 / 2%);
+  --highlight-color-light-mode: rgb(0 0 0 / 10%);
+
+  /* Tokens oficiais — Dark Mode */
+  --text-color-dark-mode: #ffffff;
+  --stroke-color-dark-mode: rgb(255 255 255 / 50%);
+  --surface-color-dark-mode: rgb(255 255 255 / 10%);
+  --surface-color-dark-mode-hover: rgb(255 255 255 / 5%);
+  --highlight-color-dark-mode: rgb(255 255 255 / 20%);
+
+  /* Aliases semânticos padrão (Light Mode) */
+  --text-color: var(--text-color-light-mode);
+  --stroke-color: var(--stroke-color-light-mode);
+  --surface-color: var(--surface-color-light-mode);
+  --surface-color-hover: var(--surface-color-light-mode-hover);
+  --highlight-color: var(--highlight-color-light-mode);
+
+  /* Background oficial — Light Mode Mobile */
+  --bg-image: url('./assets/bg-mobile-light.jpg');
+}
+
+@media (min-width: 700px) {
+  :root {
+    /* Background oficial — Light Mode Desktop */
+    --bg-image: url('./assets/bg-desktop-light.jpg');
+  }
+}
+
+/* Dark Mode Tokens & Background */
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Aliases semânticos (Dark Mode) */
+  --text-color: var(--text-color-dark-mode);
+  --stroke-color: var(--stroke-color-dark-mode);
+  --surface-color: var(--surface-color-dark-mode);
+  --surface-color-hover: var(--surface-color-dark-mode-hover);
+  --highlight-color: var(--highlight-color-dark-mode);
+
+  /* Background oficial — Dark Mode Mobile */
+  --bg-image: url('./assets/bg-mobile.jpg');
+}
+
+@media (min-width: 700px) {
+  [data-theme='dark'] {
+    /* Background oficial — Dark Mode Desktop */
+    --bg-image: url('./assets/bg-desktop.jpg');
+  }
+}
+
+/* Light Mode explícito quando data-theme="light" */
+[data-theme='light'] {
+  color-scheme: light;
+
+  --text-color: var(--text-color-light-mode);
+  --stroke-color: var(--stroke-color-light-mode);
+  --surface-color: var(--surface-color-light-mode);
+  --surface-color-hover: var(--surface-color-light-mode-hover);
+  --highlight-color: var(--highlight-color-light-mode);
+
+  --bg-image: url('./assets/bg-mobile-light.jpg');
+}
+
+@media (min-width: 700px) {
+  [data-theme='light'] {
+    --bg-image: url('./assets/bg-desktop-light.jpg');
+  }
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-image) no-repeat top center / cover;
+  background-attachment: fixed;
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-image 0.25s ease-in-out, color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Acessibilidade de foco para navegação por teclado */
+:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 3px;
+}
