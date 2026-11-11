@@ -1,0 +1,40 @@
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+@media (max-width: 500px) {
+  #container {
+    margin-top: 40px;
+  }
+}
+
+.links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.footer {
+  padding: 24px 0 40px;
+  text-align: center;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.footer-link {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+}
