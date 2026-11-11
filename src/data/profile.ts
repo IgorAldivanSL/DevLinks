@@ -74,6 +74,20 @@ export const socialLinks: SocialLinkItem[] = [
     icon: 'logo-github'
   },
   {
+    id: 'instagram',
+    name: 'Instagram',
+    url: '#',
+    ariaLabel: 'Instagram',
+    icon: 'logo-instagram'
+  },
+  {
+    id: 'youtube',
+    name: 'YouTube',
+    url: '#',
+    ariaLabel: 'YouTube',
+    icon: 'logo-youtube'
+  },
+  {
     id: 'linkedin',
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/igor-aldivansl',

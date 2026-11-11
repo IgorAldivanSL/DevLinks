@@ -29,27 +29,32 @@ const ioniconsSvgPaths: Record<SocialLinkItem['icon'], React.ReactNode> = {
 export const SocialLinks: React.FC<SocialLinksProps> = ({ links }) => {
   return (
     <nav className="social-links-container" id="social-links" aria-label="Redes sociais">
-      {links.map(link => (
-        <a
-          key={link.id}
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={link.ariaLabel}
-          className="social-link"
-        >
-          <svg
-            viewBox="0 0 512 512"
-            width={24}
-            height={24}
-            fill="currentColor"
-            aria-hidden="true"
-            className="social-icon"
+      {links.map(link => {
+        const isExternal = link.url !== '#'
+
+        return (
+          <a
+            key={link.id}
+            href={link.url}
+            target={isExternal ? '_blank' : '_self'}
+            rel={isExternal ? 'noopener noreferrer' : undefined}
+            aria-label={link.ariaLabel}
+            className="social-link"
+            onClick={link.url === '#' ? e => e.preventDefault() : undefined}
           >
-            {ioniconsSvgPaths[link.icon]}
-          </svg>
-        </a>
-      ))}
+            <svg
+              viewBox="0 0 512 512"
+              width={24}
+              height={24}
+              fill="currentColor"
+              aria-hidden="true"
+              className="social-icon"
+            >
+              {ioniconsSvgPaths[link.icon]}
+            </svg>
+          </a>
+        )
+      })}
     </nav>
   )
 }
